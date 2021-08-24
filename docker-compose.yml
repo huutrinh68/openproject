@@ -1,13 +1,7 @@
 version: '3.5'
 services:
   web:
-    # image: openproject/community:11.3.4
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args:
-        - http_proxy=${http_proxy}
-        - https_proxy=${http_proxy}
+    image: openproject/community:11.3.4
     depends_on:
       - postgres
       - memcached
